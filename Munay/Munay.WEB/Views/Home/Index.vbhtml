@@ -44,18 +44,15 @@ End Code
     <!-- /.container -->
 </section>
 
-@*CARRUCEL FOTOS*@
+@* DX SLIDER *@
 <aside class="bacgraun">
     <section id="services">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    @* SLIDER DE IMAGENES DEVEXTREME *@
-
-                    @*<div id="dxSlider" style="align-items:center">
-                            <div id="gallery" data-bind="dxGallery: galleryOptions"></div>
-                        </div>*@
-
+                    <div id="dxSlider" style="align-items:center; margin-top: 10%; margin-bottom: 10%;">
+                            <div id="gallery" data-bind="dxGallery: nuestraRuta"></div>
+                        </div>
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
@@ -79,7 +76,7 @@ End Code
     <!-- /.container -->
 </section>
 
-@*Noticias Visualizadas*@
+@* DX NOTICIAS*@
 <section id="portfolio" class="bacgraun">
     <div class="container">
         <div class="row">
@@ -101,9 +98,6 @@ End Code
                     @* dxList *@
                 </div>
                 <!-- /.row (nested) -->
-                @*<div class="btn btn-lg btn-default" style="margin-top: 15px; border-radius: 0px">
-                        <a>@Html.ActionLink("Ver más noticias", "ListaPublicacionNoticias", "PublicacionNoticias")</a>
-                    </div>*@
             </div>
             <!-- /.col-lg-10 -->
         </div>
@@ -180,10 +174,10 @@ End Code
                 </ul>
                 <ul class="list-inline">
                     <li>
-                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        <a href="#"><img id="feisbuc" src="~/Content/img/face.png" style="height:50px" /></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                        <a href="#"><img id="insta" src="~/Content/img/insta.png" style="height:50px" /></a>
                     </li>
                 </ul>
             </div>
@@ -195,6 +189,13 @@ End Code
     <script type="text/javascript" src="~/Scripts/app/Home/home.js"></script>
     <script>
         $(document).ready(function () {
+            $("#feisbuc").click(function () {
+                window.location.href = "https://web.facebook.com/MunayJuguetesAndinos/";
+            })
+            $("#insta").click(function () {
+                window.location.href = "https://www.instagram.com/munayjuguetesandinos/?hl=es-la";
+            })
+
             $("#conocerMas").click(function () {
                 $("#revelar").toggle(500);
                 $("#mision").toggle(500);
