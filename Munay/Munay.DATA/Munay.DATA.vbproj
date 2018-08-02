@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,6 +75,12 @@
     <Compile Include="Articulo.vb" />
     <Compile Include="Categoria.vb" />
     <Compile Include="DetallePedido.vb" />
+    <Compile Include="Migrations\201808020422149_initial-migration.Designer.vb">
+      <DependentUpon>201808020422149_initial-migration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020422149_initial-migration.vb" />
+    <Compile Include="Migrations\Configuration.vb" />
+    <Compile Include="MunayDBContext.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +104,9 @@
     <Compile Include="Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808020422149_initial-migration.resx">
+      <DependentUpon>201808020422149_initial-migration.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
