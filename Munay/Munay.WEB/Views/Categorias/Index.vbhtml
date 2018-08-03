@@ -2,7 +2,12 @@
     ViewData("Title") = "Categorías"
 End Code
 
-<div id="titulo" class="long-title" style="background-color:#ba007c"><h3>Categorías</h3></div>
+<header id="top" class="bacgraun">
+    <div class="text-vertical-center">
+        <img id="logo" src="~/Content/img/logo.png" style="width: 15%" />
+    </div>
+</header>
+<div id="titulo" class="long-title" style="background-color:#a76a3d"><h3>Categorías</h3></div>
 
 <div class="container">   
     <div id="customPadding">

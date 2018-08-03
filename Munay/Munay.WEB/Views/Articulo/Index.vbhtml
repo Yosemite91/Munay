@@ -10,19 +10,9 @@ End Code
 </header>
 
 @*Articulos*@
-<section id="about" class="about" style="background-color: #a76a3d; color:white">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Descubra nuestros productos</h2>
-            </div>
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-</section>
+<div id="titulo" class="long-title" style="background-color:#ba007c; margin-bottom: -15px; padding-bottom: 15px"><h3>Descubra nuestros productos</h3></div>
 
-<aside class="bacgraun">
+<aside class="bacgraun" style="padding-top: 30px">
     <section id="services">
         <div class="container">
             <div class="row text-center">

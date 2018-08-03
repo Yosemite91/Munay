@@ -2,12 +2,17 @@
     ViewData("Title") = "RRSS"
 End Code
 
-<div id="titulo" class="long-title" style="background-color:#ba007c"><h3>Nuestra Ruta</h3></div>
+<header id="top" class="bacgraun">
+    <div class="text-vertical-center">
+        <img id="logo" src="~/Content/img/logo.png" style="width: 15%" />
+    </div>
+</header>
+<div id="titulo" class="long-title" style="background-color:#409a55"><h3>Nuestra Ruta</h3></div>
 <div data-bind="dxLoadPanel: { visible: loading }"></div>
 
 <div class="container">    
     <div id="customPadding">
-        <div id="titulo" class="long-title" style="background-color:#ba007c">
+        <div id="titulo" class="long-title" style="background-color:#409a55">
             <h3>
                 <span class="dx-icon-arrowup icon"></span>
                 Subir Foto
@@ -20,7 +25,7 @@ End Code
         </div>
         <br />
 
-        <div id="titulo" class="long-title" style="background-color:#ba007c">
+        <div id="titulo" class="long-title" style="background-color:#409a55">
             <h3>
                 <span class="dx-icon-image icon"></span>
                 Fotos RRSS
