@@ -22,7 +22,7 @@
             <li class="sidebar-brand">@Html.ActionLink("Inicio", "Index", "Home")</li> 
             <li><a>@Html.ActionLink("Ir a la Tienda", "Venta", "Articulo")</a></li>
             
-            <!-- ko if: esAdministrador === 'DANILO.UTA@GMAIL.COM' -->
+            <!-- ko if: esAdministrador === 'JERE@UTA.CL' -->
                 <li>@Html.ActionLink("Nuestra Ruta", "Index", "RRSS")</li>
                 <li>@Html.ActionLink("Categorías", "Index", "Categorias")</li>
                 <li>@Html.ActionLink("Articulos", "Index", "Articulos")</li>
