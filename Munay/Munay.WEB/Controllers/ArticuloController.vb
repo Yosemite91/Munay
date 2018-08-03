@@ -5,7 +5,7 @@ Namespace Controllers
         Inherits Controller
 
         ' GET: Articulo
-        Function Index() As ActionResult
+        Function Venta() As ActionResult
             Return View()
         End Function
     End Class

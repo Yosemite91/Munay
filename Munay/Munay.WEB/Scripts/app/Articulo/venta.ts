@@ -3,7 +3,7 @@
 /// <reference path="../../typings/devextreme/devextreme.d.ts" />
 
 namespace Articulo {
-    export class index {
+    export class venta {
 
         /*DataSource de "productos" */
         public articulos: KnockoutObservableArray<any> = ko.observableArray<any>();
