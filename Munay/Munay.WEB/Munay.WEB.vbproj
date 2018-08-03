@@ -189,10 +189,13 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
-    <Compile Include="Controllers\APIControllers\RedsocialesAPIController.vb" />
+    <Compile Include="Controllers\API\CategoriasAPIController.vb" />
+    <Compile Include="Controllers\API\RedsocialesAPIController.vb" />
+    <Compile Include="Controllers\CategoriasController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoriaDTO.vb" />
     <Compile Include="Models\RedsocialModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -331,7 +334,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <Content Include="Views\Categorias\Index.vbhtml" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\Categorias\Index.ts" />
     <TypeScriptCompile Include="Scripts\app\Home\home.ts" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

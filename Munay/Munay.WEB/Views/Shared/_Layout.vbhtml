@@ -20,20 +20,17 @@
                 <i class="glyphicon glyphicon-remove"> </i>
             </a>
             <li class="sidebar-brand">@Html.ActionLink("Inicio", "Index", "Home")</li>
-            <!-- ko if: Token === null -->
             <li>
                 @Html.ActionLink("Iniciar Sesión", "Login", "Login")
             </li>
-            <!-- /ko -->
-            <!-- ko if: esAdministrador === 'true' -->
-            <li>@Html.ActionLink("Usuarios", "ListaUsuarios", "Usuario")</li>            
+            
+            <li>@Html.ActionLink("Usuarios", "ListaUsuarios", "Usuario")</li>
             <li>@Html.ActionLink("Publicaciones", "ListaPublicaciones", "Publicacion")</li>
-            <!-- /ko -->
-            <!-- ko if: Token !== null -->
+            <li>@Html.ActionLink("Categorias y Tamaños", "Index", "Categorias")</li>
+            
             <li>
                 <a href="#" onClick="Salir();"> Cerrar Sesión</a>
             </li>
-            <!-- /ko -->
         </ul>
     </nav>
 
