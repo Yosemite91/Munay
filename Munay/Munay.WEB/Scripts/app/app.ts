@@ -5,7 +5,7 @@ namespace App {
     export var appRoot: string;
     export var apiRoot: string;
     //MODIFICAR PARA LOGIN
-    export var appPrefix: string = 'GPC';        
+    export var appPrefix: string = 'MUNAY';        
     export var esAdministrador: string = localStorage.getItem(App.appPrefix + 'login.esAdministrador');
     
     $.ajaxSetup({

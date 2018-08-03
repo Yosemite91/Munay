@@ -189,6 +189,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\ArticuloController.vb" />
     <Compile Include="Controllers\RRSSController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -331,7 +332,9 @@
     </None>
     <None Include="packages.config" />
     <Content Include="Views\RRSS\Index.vbhtml" />
+    <Content Include="Views\Articulo\Index.vbhtml" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\Articulo\index.ts" />
     <TypeScriptCompile Include="Scripts\app\Home\home.ts" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
