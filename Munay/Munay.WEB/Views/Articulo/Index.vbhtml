@@ -27,6 +27,24 @@ End Code
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">                    
+                    <div class="dx-field">
+                        <div id="categoriaTorta" data-bind="dxTabs: categorias"></div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+</aside>
+
+<aside class="bacgraun">
+    <section id="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
                     <div data-bind="dxTileView: productos"></div>
                     <!-- /.row (nested) -->
                 </div>

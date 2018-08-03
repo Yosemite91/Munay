@@ -6,7 +6,18 @@ namespace Articulo {
     export class index {
 
         /*DataSource de "productos" */
-        public articulos: KnockoutObservable<any> = ko.observable<any>();
+        public articulos: KnockoutObservableArray<any> = ko.observableArray<any>();
+        public categos: KnockoutObservableArray<any> = ko.observableArray<any>();
+
+        public categorias: DevExpress.ui.dxTabsOptions = {
+            dataSource: this.categos,
+            selectionMode: 'single',
+            scrollByContent: true,
+            showNavButtons: true,
+            onItemClick: function (e) {               
+                /*controlador para q traiga los articulos*/
+            }
+        }
 
         public productos: DevExpress.ui.dxTileViewOptions = {
             dataSource: this.articulos,
@@ -23,7 +34,7 @@ namespace Articulo {
                 localStorage.setItem('Carrito', e.value);
             }
         }
-
+                    
         constructor() {
             /*contralador fotos para RRSS*/           
             var homes = [{             
@@ -48,8 +59,12 @@ namespace Articulo {
                 Foto: "Content/img/mu5.png"
             }
             ];
+            var nombresCategos = [
+                'hola', 'hola', 'hola'
+            ];
 
-            this.articulos(homes);
+            this.categos(nombresCategos);
+            this.articulos(homes);            
         }
     }
 }

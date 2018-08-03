@@ -191,9 +191,14 @@
     <Compile Include="App_Start\WebApiConfig.vb" />
     <Compile Include="Controllers\ArticuloController.vb" />
     <Compile Include="Controllers\RRSSController.vb" />
+    <Compile Include="Controllers\API\CategoriasAPIController.vb" />
+    <Compile Include="Controllers\API\RedsocialesAPIController.vb" />
+    <Compile Include="Controllers\CategoriasController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoriaDTO.vb" />
+    <Compile Include="Models\RedsocialModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -332,9 +337,11 @@
     </None>
     <None Include="packages.config" />
     <Content Include="Views\RRSS\Index.vbhtml" />
+    <Content Include="Views\Categorias\Index.vbhtml" />
     <Content Include="Views\Articulo\Index.vbhtml" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\Articulo\index.ts" />
+    <TypeScriptCompile Include="Scripts\app\Categorias\Index.ts" />
     <TypeScriptCompile Include="Scripts\app\Home\home.ts" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -412,7 +419,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Munay.DATA\Munay.DATA.vbproj">
