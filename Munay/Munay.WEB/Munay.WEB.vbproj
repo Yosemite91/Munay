@@ -189,9 +189,14 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\API\CategoriasAPIController.vb" />
+    <Compile Include="Controllers\API\RedsocialesAPIController.vb" />
+    <Compile Include="Controllers\CategoriasController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoriaDTO.vb" />
+    <Compile Include="Models\RedsocialModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -249,6 +254,22 @@
     <Content Include="Content\dx.win10.white.css" />
     <Content Include="Content\dx.win8.black.css" />
     <Content Include="Content\dx.win8.white.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\img\callout.jpg" />
+    <Content Include="Content\img\face.png" />
+    <Content Include="Content\img\insta.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\mu1.PNG" />
+    <Content Include="Content\img\mu2.PNG" />
+    <Content Include="Content\img\mu3.PNG" />
+    <Content Include="Content\img\mu4.PNG" />
+    <Content Include="Content\img\mu5.PNG" />
+    <Content Include="Content\img\mu6.PNG" />
+    <Content Include="Content\img\mu7.PNG" />
+    <Content Include="Content\img\mu8.PNG" />
+    <Content Include="Content\img\munay.png" />
     <Content Include="Content\layouts\Desktop\DesktopLayout.css" />
     <Content Include="Content\layouts\Desktop\DesktopLayout.html" />
     <Content Include="Content\layouts\Desktop\DesktopLayout.js" />
@@ -258,6 +279,7 @@
     <Content Include="Content\layouts\Popup\PopupLayout.css" />
     <Content Include="Content\layouts\Popup\PopupLayout.html" />
     <Content Include="Content\layouts\Popup\PopupLayout.js" />
+    <Content Include="Content\vistaLista.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -271,6 +293,37 @@
     <Content Include="Content\icons\dxiconsios.ttf" />
     <Content Include="Content\icons\dxicons.woff" />
     <Content Include="Content\icons\dxicons.ttf" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome\less\animated.less" />
+    <Content Include="Content\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\font-awesome\less\core.less" />
+    <Content Include="Content\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\font-awesome\less\icons.less" />
+    <Content Include="Content\font-awesome\less\larger.less" />
+    <Content Include="Content\font-awesome\less\list.less" />
+    <Content Include="Content\font-awesome\less\mixins.less" />
+    <Content Include="Content\font-awesome\less\path.less" />
+    <Content Include="Content\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\font-awesome\less\stacked.less" />
+    <Content Include="Content\font-awesome\less\variables.less" />
+    <Content Include="Content\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\font-awesome\scss\_core.scss" />
+    <Content Include="Content\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\font-awesome\scss\_list.scss" />
+    <Content Include="Content\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\font-awesome\scss\_path.scss" />
+    <Content Include="Content\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\font-awesome\scss\_variables.scss" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -281,6 +334,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <Content Include="Views\Categorias\Index.vbhtml" />
+    <TypeScriptCompile Include="Scripts\app\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\Categorias\Index.ts" />
+    <TypeScriptCompile Include="Scripts\app\Home\home.ts" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
   </ItemGroup>
@@ -350,8 +407,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Views\_ViewStart.vbhtml" />
-    <Content Include="Views\Home\About.vbhtml" />
-    <Content Include="Views\Home\Contact.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Shared\Error.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
@@ -359,7 +414,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Munay.DATA\Munay.DATA.vbproj">
@@ -368,6 +422,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\Utils.ts" />
     <TypeScriptCompile Include="Scripts\typings\devextreme\devextreme.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
