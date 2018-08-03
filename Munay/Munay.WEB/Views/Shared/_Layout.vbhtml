@@ -19,13 +19,20 @@
             <a id="menu-close" class="btn btn-light btn-lg pull-right toggle">
                 <i class="glyphicon glyphicon-remove"> </i>
             </a>
-            <li class="sidebar-brand">@Html.ActionLink("Inicio", "Index", "Home")</li>
-            <li>@Html.ActionLink("Iniciar Sesión", "Login", "Login")</li>
-            <li>@Html.ActionLink("Nuestra Ruta", "Index", "RRSS")</li>
-            <li>@Html.ActionLink("Categorías", "Index", "Categorias")</li>
-            <li>
-                <a href="#" onClick="Salir();"> Cerrar Sesión</a>
-            </li>
+            <li class="sidebar-brand">@Html.ActionLink("Inicio", "Index", "Home")</li> 
+            
+            <!-- ko if: esAdministrador === 'DANILO.UTA@GMAIL.COM' -->
+                <li>@Html.ActionLink("Nuestra Ruta", "Index", "RRSS")</li>
+                <li>@Html.ActionLink("Categorías", "Index", "Categorias")</li>
+            <!-- /ko -->
+            
+            <!-- ko if: Token === null -->
+                <li>@Html.ActionLink("Iniciar Sesión", "Index", "Login")</li>
+            <!-- /ko -->             
+
+            <!-- ko if: Token !== null -->
+                <li><a href="#" onClick="Salir();"> Cerrar Sesión</a></li>
+            <!-- /ko -->
         </ul>
     </nav>
 
@@ -53,7 +60,7 @@
 
         App.apiRoot = '@Url.Content("~/")api/';
         App.appRoot = '@Url.Content("~/")';
-        var Token = localStorage.getItem(App.appPrefix + 'login.token');
+        var Token = localStorage.getItem('Token');
 
         function Salir(){
             App.goToLogin();

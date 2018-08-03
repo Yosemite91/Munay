@@ -189,7 +189,9 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\API\LoginAPIController.vb" />
     <Compile Include="Controllers\ArticuloController.vb" />
+    <Compile Include="Controllers\LoginController.vb" />
     <Compile Include="Controllers\RRSSController.vb" />
     <Compile Include="Controllers\API\CategoriasAPIController.vb" />
     <Compile Include="Controllers\API\RedsocialesAPIController.vb" />
@@ -199,6 +201,7 @@
     </Compile>
     <Compile Include="Models\CategoriaDTO.vb" />
     <Compile Include="Models\RedsocialModel.vb" />
+    <Compile Include="Models\UsuarioDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -339,6 +342,7 @@
     <Content Include="Views\RRSS\Index.vbhtml" />
     <Content Include="Views\Categorias\Index.vbhtml" />
     <Content Include="Views\Articulo\Index.vbhtml" />
+    <Content Include="Views\Login\Index.vbhtml" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\Articulo\index.ts" />
     <TypeScriptCompile Include="Scripts\app\Categorias\Index.ts" />
@@ -427,6 +431,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\Login\index.ts" />
     <TypeScriptCompile Include="Scripts\app\RRSS\rrss.ts" />
     <TypeScriptCompile Include="Scripts\app\Utils.ts" />
     <TypeScriptCompile Include="Scripts\typings\devextreme\devextreme.d.ts" />
