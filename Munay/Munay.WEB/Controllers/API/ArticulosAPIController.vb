@@ -31,6 +31,31 @@ Namespace Controllers.API
             End Try
         End Function
 
+        <HttpGet>
+        <Route("articulos-por-categoria/{id}", Name:="GetArticulosPorCategoria")>
+        Public Function GetArticulosPorCategoria(id As Integer) As IHttpActionResult
+            Dim db As New MunayDBContext
+            Try
+                Dim listArticulos As List(Of Articulo) = db.Articulos.Where(Function(a) a.Categoria.ID = id).ToList()
+                If listArticulos Is Nothing OrElse listArticulos.Count = 0 Then Return Me.Ok(New List(Of Models.CategoriasDTO))
+
+                Dim listArticuloDto As New List(Of Models.ArticuloDTO)
+                For Each arti As Articulo In listArticulos
+                    listArticuloDto.Add(New Models.ArticuloDTO With {.ID = arti.ID,
+                                                                    .Nombre = arti.Nombre,
+                                                                    .Precio = arti.Precio,
+                                                                    .Descripcion = arti.Descripcion,
+                                                                    .Categoria = arti.Categoria,
+                                                                    .FotoStr = Encoding.Default.GetString(arti.Foto)})
+                Next
+                Return Me.Ok(listArticuloDto)
+            Catch ex As Exception
+                Return Me.Content(HttpStatusCode.BadRequest, ex.Message)
+            Finally
+                db.Dispose()
+            End Try
+        End Function
+
         <HttpPost>
         <Route("", Name:="PostArticulo")>
         Public Function PostArticulo(<FromBody> model As Models.ArticuloDTO) As IHttpActionResult
