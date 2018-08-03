@@ -3,7 +3,7 @@
 End Code
 
 <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12">
         <div id="titulo" class="long-title"><h3>Categorías</h3></div>
         <div id="cuerpo" style="margin-bottom:70px" class="dx-fieldset">
             <div class="dx-field">
