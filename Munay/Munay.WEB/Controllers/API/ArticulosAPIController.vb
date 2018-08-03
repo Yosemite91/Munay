@@ -46,6 +46,7 @@ Namespace Controllers.API
                     With produExist
                         .Nombre = model.Nombre
                         .Precio = model.Precio
+                        .Descripcion = model.Descripcion
                         .Categoria = db.Categorias.Where(Function(c) c.ID = model.Categoria.ID).SingleOrDefault()
                     End With
                     db.SaveChanges()

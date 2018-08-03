@@ -18,13 +18,10 @@ namespace Home {
             showNavButtons: true,
             showIndicator: true,
             stretchImages: true,
-            swipeEnabled: true,
-            onItemClick: (e) => {
-
-            }
+            swipeEnabled: true
         }
 
-        /*DataSource de Nuestra Ruta */
+        /*DataSource de Noticias */
         public noticias: KnockoutObservable<any> = ko.observable<any>();
 
         public listOptions: DevExpress.ui.dxListOptions = {
@@ -43,10 +40,6 @@ namespace Home {
         };
 
         constructor() {
-            /*contralador fotos para RRSS*/
-            //var BDfotos = ["Content/img/mu1.png", "Content/img/mu2.png", "Content/img/mu3.png", "Content/img/mu4.png", "Content/img/mu5.png", "Content/img/mu6.png", "Content/img/mu7.png", "Content/img/mu8.png"];
-
-            //this.fotos(BDfotos);
             this.getFotos();
         }
 
