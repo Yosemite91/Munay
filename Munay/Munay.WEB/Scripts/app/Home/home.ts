@@ -44,9 +44,34 @@ namespace Home {
 
         constructor() {
             /*contralador fotos para RRSS*/
-            var BDfotos = ["Content/img/mu1.png", "Content/img/mu2.png", "Content/img/mu3.png", "Content/img/mu4.png", "Content/img/mu5.png", "Content/img/mu6.png", "Content/img/mu7.png", "Content/img/mu8.png"];
+            //var BDfotos = ["Content/img/mu1.png", "Content/img/mu2.png", "Content/img/mu3.png", "Content/img/mu4.png", "Content/img/mu5.png", "Content/img/mu6.png", "Content/img/mu7.png", "Content/img/mu8.png"];
 
-            this.fotos(BDfotos);
+            //this.fotos(BDfotos);
+            this.getFotos();
+        }
+
+        getFotos(): void {
+            $.ajax({
+                url: App.apiRoot + '/redsociales/get-fotos',
+                type: 'GET',
+                cache: false,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: (data: any): void => {
+                    for (var i: number = 0; i < data.length; i++) {
+                        var tam: number = data.length;
+                        var arreglo = new Array(tam);
+
+                        for (var i = 0; i < tam; i++) {
+                            arreglo[i] = data[i].foto;
+                        }
+                        this.fotos(arreglo);
+                    }
+                },
+                error: (data: any): void => {
+                    DevExpress.ui.notify(data.responseJSON, "error", 3000);
+                }
+            });
         }
     }
 }
