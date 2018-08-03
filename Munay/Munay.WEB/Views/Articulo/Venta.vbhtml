@@ -47,8 +47,8 @@ End Code
 </aside>
 
 @Section Scripts
-    <script type="text/javascript" src="~/Scripts/app/Articulo/index.js"></script>
+    <script type="text/javascript" src="~/Scripts/app/Articulo/venta.js"></script>
     <script>
-        ko.applyBindings(new Articulo.index);
+        ko.applyBindings(new Articulo.venta);
     </script>
 End Section

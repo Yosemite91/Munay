@@ -345,9 +345,11 @@
     <Content Include="Views\RRSS\Index.vbhtml" />
     <Content Include="Views\Categorias\Index.vbhtml" />
     <Content Include="Views\Articulos\Index.vbhtml" />
+    <Content Include="Views\Articulo\Venta.vbhtml" />
     <Content Include="Views\Login\Index.vbhtml" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\app\Articulos\Index.ts" />
+    <TypeScriptCompile Include="Scripts\app\Articulo\venta.ts" />
     <TypeScriptCompile Include="Scripts\app\Categorias\Index.ts" />
     <TypeScriptCompile Include="Scripts\app\Home\home.ts" />
     <Content Include="Scripts\bootstrap.js" />

@@ -20,7 +20,7 @@
                 <i class="glyphicon glyphicon-remove"> </i>
             </a>
             <li class="sidebar-brand">@Html.ActionLink("Inicio", "Index", "Home")</li> 
-            <li><a>@Html.ActionLink("Ir a la Tienda", "Index", "Articulo")</a></li>
+            <li><a>@Html.ActionLink("Ir a la Tienda", "Venta", "Articulo")</a></li>
             <li>@Html.ActionLink("Categorias", "Index", "Categorias")</li>
             <!-- ko if: esAdministrador === 'DANILO.UTA@GMAIL.COM' -->
                 <li>@Html.ActionLink("Nuestra Ruta", "Index", "RRSS")</li>
