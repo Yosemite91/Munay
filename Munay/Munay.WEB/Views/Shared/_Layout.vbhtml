@@ -23,11 +23,12 @@
             <li>
                 @Html.ActionLink("Iniciar Sesión", "Login", "Login")
             </li>
-            
+
             <li>@Html.ActionLink("Usuarios", "ListaUsuarios", "Usuario")</li>
             <li>@Html.ActionLink("Publicaciones", "ListaPublicaciones", "Publicacion")</li>
-            <li>@Html.ActionLink("Categorias y Tamaños", "Index", "Categorias")</li>
-            
+            <li>@Html.ActionLink("Categorias", "Index", "Categorias")</li>
+            <li>@Html.ActionLink("Articulos", "Index", "Articulos")</li>
+
             <li>
                 <a href="#" onClick="Salir();"> Cerrar Sesión</a>
             </li>

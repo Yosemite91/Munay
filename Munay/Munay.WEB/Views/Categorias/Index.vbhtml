@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "Categorías"
+    ViewData("Title") = "CATEGORÍA"
 End Code
 
 <div class="row">

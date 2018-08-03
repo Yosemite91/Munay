@@ -1,5 +1,5 @@
 ﻿Public Class Articulo
-    Public Property ID As String
+    Public Property ID As Integer
     Public Property Nombre As String
     Public Property Foto As Byte()
     Public Property Precio As Integer
