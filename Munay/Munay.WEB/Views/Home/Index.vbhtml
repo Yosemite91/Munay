@@ -28,7 +28,7 @@ End Code
     <div class="text-vertical-center">
         <h2>Trabajo Enfocado</h2>
         <div class="btn btn-lg btn-light" id="conocerMas">
-            <a>@Html.ActionLink("Ir a la Tienda", "Index", "Articulo")</a>
+            <a>@Html.ActionLink("Ir a la Tienda", "Venta", "Articulo")</a>
         </div>
 
         @*<p id="conocerMas" class="btn btn-lg btn-light">Ir a la Tienda</p>*@
