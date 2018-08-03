@@ -75,10 +75,10 @@
     <Compile Include="Articulo.vb" />
     <Compile Include="Categoria.vb" />
     <Compile Include="DetallePedido.vb" />
-    <Compile Include="Migrations\201808020422149_initial-migration.Designer.vb">
-      <DependentUpon>201808020422149_initial-migration.vb</DependentUpon>
+    <Compile Include="Migrations\201808030641262_initial-migration.Designer.vb">
+      <DependentUpon>201808030641262_initial-migration.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808020422149_initial-migration.vb" />
+    <Compile Include="Migrations\201808030641262_initial-migration.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="MunayDBContext.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -104,8 +104,8 @@
     <Compile Include="Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808020422149_initial-migration.resx">
-      <DependentUpon>201808020422149_initial-migration.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808030641262_initial-migration.resx">
+      <DependentUpon>201808030641262_initial-migration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

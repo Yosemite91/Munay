@@ -189,14 +189,22 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\API\ArticulosAPIController.vb" />
+    <Compile Include="Controllers\API\LoginAPIController.vb" />
+    <Compile Include="Controllers\ArticuloController.vb" />
+    <Compile Include="Controllers\LoginController.vb" />
+    <Compile Include="Controllers\RRSSController.vb" />
     <Compile Include="Controllers\API\CategoriasAPIController.vb" />
     <Compile Include="Controllers\API\RedsocialesAPIController.vb" />
+    <Compile Include="Controllers\ArticulosController.vb" />
     <Compile Include="Controllers\CategoriasController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArticuloDTO.vb" />
     <Compile Include="Models\CategoriaDTO.vb" />
     <Compile Include="Models\RedsocialModel.vb" />
+    <Compile Include="Models\UsuarioDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -334,8 +342,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <Content Include="Views\RRSS\Index.vbhtml" />
     <Content Include="Views\Categorias\Index.vbhtml" />
+    <Content Include="Views\Articulos\Index.vbhtml" />
+    <Content Include="Views\Login\Index.vbhtml" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\Articulos\Index.ts" />
     <TypeScriptCompile Include="Scripts\app\Categorias\Index.ts" />
     <TypeScriptCompile Include="Scripts\app\Home\home.ts" />
     <Content Include="Scripts\bootstrap.js" />
@@ -422,6 +434,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\Login\index.ts" />
+    <TypeScriptCompile Include="Scripts\app\RRSS\rrss.ts" />
     <TypeScriptCompile Include="Scripts\app\Utils.ts" />
     <TypeScriptCompile Include="Scripts\typings\devextreme\devextreme.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />

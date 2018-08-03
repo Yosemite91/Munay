@@ -11,7 +11,7 @@ Namespace Migrations
                 "dbo.Articulo",
                 Function(c) New With
                     {
-                        .ID = c.String(nullable := False, maxLength := 128),
+                        .ID = c.Int(nullable := False, identity := True),
                         .Nombre = c.String(),
                         .Foto = c.Binary(),
                         .Precio = c.Int(nullable := False),
@@ -39,7 +39,7 @@ Namespace Migrations
                         .FechaRegistro = c.DateTime(nullable := False),
                         .Cantidad = c.Int(nullable := False),
                         .Subtotal = c.Int(nullable := False),
-                        .Articulo_ID = c.String(maxLength := 128),
+                        .Articulo_ID = c.Int(),
                         .Pedido_ID = c.Int()
                     }) _
                 .PrimaryKey(Function(t) t.ID) _
