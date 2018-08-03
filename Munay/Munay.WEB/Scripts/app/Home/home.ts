@@ -34,13 +34,36 @@ namespace Home {
             pageLoadingText: "Cargando...",
             refreshingText: "Recargando...",
             onItemClick: (e) => {
-                var datoItem = e.itemData;
-                window.location.assign(App.appRoot + 'Publicacion/DetallePublicacion?id=' + datoItem.id);
+                
             }
         };
 
         constructor() {
             this.getFotos();
+
+            var BDfotos = ["Content/img/mu1.png", "Content/img/mu2.png", "Content/img/mu3.png", "Content/img/mu4.png", "Content/img/mu5.png", "Content/img/mu6.png", "Content/img/mu7.png", "Content/img/mu8.png"];
+            this.fotos(BDfotos);
+
+            var products = [
+                {
+                    "Titulo": "Noticia 1",
+                    "Descripcion": "Esto es un texto de relleno para la noticia, Esto es un texto de relleno para la noticia",
+                    "Link": "www.paginaQueNoExiste.com",
+                    "Foto": "Content/img/n1.jpg"
+                }, {
+                    "Titulo": "Noticia 2",
+                    "Descripcion": "Esto es un texto de relleno para la noticia",
+                    "Link": "www.paginaQueNoExiste.com",
+                    "Foto": "Content/img/n2.jpg"
+                }, {
+                    "Titulo": "Noticia 3",
+                    "Descripcion": "Esto es un texto de relleno para la noticia, Esto es un texto de relleno para la noticia, Esto es un texto de relleno para la noticia",
+                    "Link": "www.paginaQueNoExiste.com",
+                    "Foto": "Content/img/n3.jpg"
+                }
+            ];
+
+            this.noticias(products);
         }
 
         getFotos(): void {

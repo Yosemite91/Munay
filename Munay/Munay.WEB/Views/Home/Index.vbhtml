@@ -87,18 +87,31 @@ End Code
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <div class="row">
                     @* dxList *@
-                    <div id="list" class="list-container">
+
+                    <div data-bind="dxList: listOptions">
+                        <div data-options="dxTemplate: {name: 'item'}">
+                            <div class="product">
+                                <img data-bind="attr: {src: $data.Foto}" />
+                                <h2><div data-bind="text: $data.Titulo"></div></h2>
+                                <h4><div data-bind="text: $data.Descripcion"></div></h4>
+                                <a href="mailto:name@example.com">
+                                    <div data-bind="text: $data.Link"></div></div>
+                                </a>
+                        </div>
+                    </div>
+
+                    @*<div id="list" class="list-container">
                         <div data-bind="dxList: listOptions">
                             <div data-options="dxTemplate: {name: 'item'}">
                                 <div class="product" style="display: block">
                                     <h4 data-bind="text: $data.titulo"></h4>
                                     <img id="imgList" data-bind="attr: {src: $data.foto}" />
                                     <br />
-                                    @*<div data-bind="text: $data.descripcion"></div>*@
+                                    @*<div data-bind="text: $data.descripcion"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>*@
                     @* dxList *@
                 </div>
                 <!-- /.row (nested) -->
@@ -117,42 +130,14 @@ End Code
             <div class="col-lg-12 text-center">
                 <h3>Acerca de Nosotros</h3>
                 <div id="aboutUs" style="font-size: 16px">
-                    Tras una extensa experiencia en la comercialización de productos alternativos en perfumería, y
-                    con la reciente venta de toallas higiénicas, GPC pretende dar un salto a su visión negociadora
-                    mediante la gestación de una red de socios que deseen obtener mayores ingresos a su
-                    presupuesto familiar.
-                    <p id="revelar" style="font-size: 16px; display: none; margin-top: 0">
-                        GPC representa a dos grandes empresas:
-                        Parfum D´Parfum, empresa Chilena dedicada a la venta de más de 160 tipos alternativos de
-                        perfumes de reconocimiento internacional, con un buen apoyo de marketing y con interesantes
-                        márgenes de ganancia.
-                        JM Internacional, empresa internacional que distribuye toallas higiénicas y otros productos que
-                        tienen una creciente demanda comercial.
-                    <p id="mision" class="btn btn-dark btn-lg" style="display:none">Misión</p>
-                    <p id="vision" class="btn btn-dark btn-lg" style="display:none">Visión</p>
-                    </p>
-                </div>
+                    <h4>
+                        La empresa cuenta sólo con Doña Fabiola Vidal, quien cumple las funciones de Dueña de Empresa,<br />
+                        compradora de los materiales, confeccionadora de los productos, diseñadora de las imágenes y<br />
+                        vendedora de los productos.
+                    </h4>
 
-                <div style="display:">
-                    <div id="mision2" style="display:none; margin-left:auto; margin-right:auto">
-                        <p>
-                            <h3>Misión:</h3>
-                            GPC tiene como misión la comercialización de productos de uso personal a precios accesibles y de alta calidad, con aromas reconocidos a nivel mundial. Además, aspira brindar oportunidades de negocio a socios (as) independientes que se incorporen una red comercial multinivel con incentivos y promociones.
-                        </p>
-                    </div>
-
-                    <div id="vision2" style="display:none; margin-left:auto; margin-right:auto">
-                        <p>
-                            <h3>Visión:</h3>
-                            GCP tiene como visión consolidar su emprendimiento comercial como la mejor opción para sus
-                            clientes y socios, tanto en cumplimiento y entrega de servicio de calidad, como en la innovación de
-                            productos de comprobada demanda. Asimismo, la creación de redes comerciales para tener una
-                            fuente de generación de dinero en forma inmediata y permanente.
-                        </p>
-                    </div>
-                </div>
-
-                <p id="conocerMas" class="btn btn-lg btn-light">Conocer más</p>
+                    <img src="~/Content/img/munay.jpg" style="width:40%; height:auto"/>
+                </div>                
             </div>
         </div>
     </div>
@@ -167,13 +152,13 @@ End Code
                     <strong>Contacto</strong>
                 </h4>
                 <p>
-                    3481 Melrose Place
-                    <br>Beverly Hills, CA 90210
+                    Horario: 9:00 a 17:00 hrs.
+                    <br>Arica, Chile
                 </p>
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                    <li><i class="fa fa-phone fa-fw"></i> +569 691 819 03</li>
                     <li>
-                        <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                        <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">fabiolavid32@gmail.com</a>
                     </li>
                 </ul>
                 <ul class="list-inline">
@@ -198,22 +183,7 @@ End Code
             })
             $("#insta").click(function () {
                 window.location.href = "https://www.instagram.com/munayjuguetesandinos/?hl=es-la";
-            })
-
-            $("#conocerMas").click(function () {
-                $("#revelar").toggle(500);
-                $("#mision").toggle(500);
-                $("#vision").toggle(500);
-                $("#mision2").hide(500);
-                $("#vision2").hide(500);
-            });
-
-            $("#mision").click(function () {
-                $("#mision2").toggle(500);
-            });
-            $("#vision").click(function () {
-                $("#vision2").toggle(500);
-            });
+            })            
         });
 
         ko.applyBindings(new Home.home);

@@ -277,7 +277,11 @@
     <Content Include="Content\img\mu6.PNG" />
     <Content Include="Content\img\mu7.PNG" />
     <Content Include="Content\img\mu8.PNG" />
+    <Content Include="Content\img\munay.jpg" />
     <Content Include="Content\img\munay.png" />
+    <Content Include="Content\img\n1.jpg" />
+    <Content Include="Content\img\n2.jpg" />
+    <Content Include="Content\img\n3.jpg" />
     <Content Include="Content\layouts\Desktop\DesktopLayout.css" />
     <Content Include="Content\layouts\Desktop\DesktopLayout.html" />
     <Content Include="Content\layouts\Desktop\DesktopLayout.js" />

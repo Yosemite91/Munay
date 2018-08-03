@@ -16,6 +16,7 @@ namespace Articulo {
             showNavButtons: true,
             onItemClick: function (e) {               
                 /*controlador para q traiga los articulos*/
+                this.getTortas(e.itemData.id);
             }
         }
 
@@ -26,7 +27,7 @@ namespace Articulo {
             direction: 'vertical',
             itemMargin: 20,
             itemTemplate: function(itemData, itemIndex, itemElement) {
-                itemElement.append("<div class=\"image\" style=\"background-image: url(" + itemData.Foto + ")\"></div>");
+                itemElement.append($('<img>', { 'src': itemData.Foto }));
             },
             noDataText: 'Sin artículos',
             showScrollbar: true,
@@ -63,8 +64,51 @@ namespace Articulo {
                 'hola', 'hola', 'hola'
             ];
 
-            this.categos(nombresCategos);
-            this.articulos(homes);            
+            //this.categos(nombresCategos);
+            //this.articulos(homes);            
+            this.getCategoria();
+        }
+
+        getCategoria(): void {
+            this.categos();
+            $.ajax({
+                type: 'GET',
+                url: '/api/categorias',
+                success: (data: any): void => {
+                    for (var i: number = 0; i < data.length; i++) {
+                        let cate = {
+                            id: data[i].id,
+                            text: data[i].nombre
+                        }
+                        this.categos.push(cate);
+                    }
+                }
+            });
+        }
+
+        getTortas(id: number): void {
+            this.articulos([]);
+            let url = window.location.origin + '/api/articulos/articulos-por-categoria/'+ id;
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: (data: any): void => {
+                    for (var i: number = 0; i < data.length; i++) {
+                        let produ = {
+                            ID: data[i].id,
+                            Nombre: data[i].nombre,
+                            Precio: data[i].precio,
+                            Descripcion: data[i].descripcion,
+                            Categoria: data[i].categoria.nombre,
+                            Foto: data[i].fotoStr
+                        }
+                        this.articulos.push(produ);
+                    }
+                },
+                error: (data: any): void => {
+                    DevExpress.ui.notify(data.responseJSON, "error", 3000);
+                }
+            });
         }
     }
 }
