@@ -16,13 +16,18 @@ End Code
             <div class="dx-field">
                 <div id="form-tortas" data-bind="dxForm: formOptions"></div>
             </div>
+            <div class="dx-field">
+                <div class="dx-field-value">
+                    <div data-bind="dxFileUploader: subirImagen"></div>
+                </div>
+            </div>
             <br />
             <br />
 
             <div class="dx-field">
-                <div id="botonesDetalle" class="btn-group" role="group" >
+                <div id="botonesDetalle" class="btn-group" role="group">
                     <div id="botonCrear" style="margin:5px" data-bind="dxButton: buttonOptionsClear"></div>
-                    <div id="botonCrear"style="margin:5px" data-bind="dxButton: buttonOptionsDelete"></div>
+                    <div id="botonCrear" style="margin:5px" data-bind="dxButton: buttonOptionsDelete"></div>
                     <div id="botonCrear" style="margin:5px" data-bind="dxButton: buttonOptionsAdd"></div>
                 </div>
             </div>

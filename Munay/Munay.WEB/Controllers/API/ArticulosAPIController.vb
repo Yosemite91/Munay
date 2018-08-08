@@ -73,6 +73,7 @@ Namespace Controllers.API
                         .Precio = model.Precio
                         .Descripcion = model.Descripcion
                         .Categoria = db.Categorias.Where(Function(c) c.ID = model.Categoria.ID).SingleOrDefault()
+                        .Foto = Encoding.ASCII.GetBytes(model.FotoStr)
                     End With
                     db.SaveChanges()
                     Return Me.Ok(model)
