@@ -37,6 +37,7 @@ End Code
 
     </div>
 </div>
+
 @Section scripts
     <script type="text/javascript" src="~/Scripts/app/Articulos/index.js"></script>
     <script>

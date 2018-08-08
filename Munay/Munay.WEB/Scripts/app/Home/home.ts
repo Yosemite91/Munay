@@ -28,9 +28,9 @@ namespace Home {
             dataSource: this.noticias,
             height: "100%",
             indicateLoading: true,
-            menuMode: "content",
+            menuMode: "slide",
             nextButtonText: "Más",
-            noDataText: "Sin datos por mostrar",
+            noDataText: "Sin noticias por mostrar",            
             pageLoadingText: "Cargando...",
             refreshingText: "Recargando...",
             onItemClick: (e) => {
@@ -62,7 +62,6 @@ namespace Home {
                     "Foto": "Content/img/n3.jpg"
                 }
             ];
-
             this.noticias(products);
         }
 

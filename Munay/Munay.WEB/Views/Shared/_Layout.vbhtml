@@ -40,10 +40,41 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        @*Footer solo para Index*@
+        <footer class="bacgraunFooter">
+            <div id="contact" class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4>
+                            <strong>Contacto</strong>
+                        </h4>
+                        <p>
+                            Horario: 9:00 a 17:00 hrs.
+                            <br>Arica, Chile
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-phone fa-fw"></i> (+56) 9 6918 1903</li>
+                            <li>
+                                <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">fabiolavid32@gmail.com</a>
+                            </li>
+                        </ul>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#"><img id="feisbuc" src="~/Content/img/face.png" style="height:50px" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img id="insta" src="~/Content/img/insta.png" style="height:50px" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img id="tuiter" src="~/Content/img/tuiter.png" style="height:50px" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
         @*Footer*@
         <footer2 id="footer2">
-            <p style="margin-bottom:30px" id="footerTexto">&copy; @DateTime.Now.Year - Munay</p>
             <a id="to-top" href="#top" class="btn btn-dark btn-lg">
                 <i class="glyphicon glyphicon-chevron-up"></i>
             </a>
@@ -118,6 +149,18 @@
         $("#acercaDe").click(function (e) {
             e.preventDefault();
             $('html,body').animate({ scrollTop: $(document).height() }, 1500);
+        });
+
+        $(document).ready(function () {
+            $("#feisbuc").click(function () {
+                window.location.href = "https://web.facebook.com/MunayJuguetesAndinos/";
+            })
+            $("#insta").click(function () {
+                window.location.href = "https://www.instagram.com/munayjuguetesandinos/?hl=es-la";
+            })
+            $("#tuiter").click(function () {
+                window.location.href = "https://twitter.com/MunayJuguetesA";
+            })
         });
     </script>
 

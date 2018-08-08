@@ -7,6 +7,7 @@ End Code
         <img id="logo" src="~/Content/img/logo.png" style="width: 15%" />
     </div>
 </header>
+
 <div id="titulo" class="long-title" style="background-color:#409a55"><h3>Nuestra Ruta</h3></div>
 <div data-bind="dxLoadPanel: { visible: loading }"></div>
 
